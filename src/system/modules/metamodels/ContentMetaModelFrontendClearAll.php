@@ -89,6 +89,11 @@ class ContentMetaModelFrontendClearAll extends ContentElement
 
 	public function generateReal()
 	{
+		// Get template if configured.
+		if ($this->metamodel_fef_template)
+		{
+			$this->strTemplate = $this->metamodel_fef_template;
+		}
 		return parent::generate();
 	}
 
